@@ -1,9 +1,46 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { FaInstagram, FaFacebook, FaLinkedin  } from "react-icons/fa";
+import { CiYoutube } from "react-icons/ci";
+import Joindre from '../../../reusable-ui/Joindre';
 
 export default function Footer() {
   return (
-    <FooterStyled>Footer</FooterStyled>
+    <FooterStyled>
+        <div className="footer-container">
+            <div className="footer-left">
+                <h3>Innova Tech</h3>
+                <Joindre/>
+            </div>
+            <div className="footer-center">
+                <ul>
+                    <li><Link className='footer-link' to="/formation">Nos Formations</Link></li>
+                    <li><Link className='footer-link' to="/formateur">Devenir Formateur</Link></li>
+                    <li><Link className='footer-link' to="/offres">Offres entreprises</Link></li>
+                </ul>
+            </div>
+            <div className="footer-right">
+                <ul>
+                    <li><Link className='footer-link' to="/politique">Politique de confidentialité</Link></li>
+                    <li><Link className='footer-link' to="/conditions">Conditions générales d'utilisation</Link></li>
+                    <li><Link className='footer-link' to="/mentions">Mentions légales</Link></li>
+                </ul>
+            </div>
+        </div>
+        <div className="footer-bottom">
+            <div className='footer-icon'>
+                <p className='text-icon'>Suivez-nous | </p>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram className='icon'/> </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook className='icon'/></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin className='icon'/></a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><CiYoutube className='icon'/></a>
+            </div>
+            <p className="footer-copyright">
+                &copy; 2024 <span> guinée </span> Tous droit reservés
+            </p>
+        </div>
+    </FooterStyled>
   )
 }
 const FooterStyled = styled.div`
