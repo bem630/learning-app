@@ -43,7 +43,8 @@ const SectionWrapper = styled(motion.div)`
 `;
 
 const TextContainer = styled.div`
-  flex: 1;
+  //flex: 1;
+  max-width: 50%;
   padding: 20px;
   
   h3 {
@@ -69,10 +70,14 @@ const TextContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  flex: 1;
+  //flex: 1;
   padding: 20px;
   display: flex;
   justify-content: center;
+  max-width: 50%;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 const Image = styled.img`
